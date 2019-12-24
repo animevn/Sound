@@ -1,3 +1,24 @@
 <resources>
+
     <string name="app_name">SoundSeekBarSpinnerDemo</string>
+
+    <string name="buttonDescription">errors look bad :D</string>
+    <string name="bnFx1">FX1</string>
+    <string name="bnFx2">FX2</string>
+    <string name="bnFx3">FX3</string>
+    <string name="bnStop">Stop</string>
+
+    <string-array name="spinner">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
+
 </resources>

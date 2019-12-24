@@ -6,13 +6,99 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
+    <Spinner
+        android:id="@+id/spRepeat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="64dp"
+        android:entries="@array/spinner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <SeekBar
+        android:id="@+id/sbrVolume"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:max="100"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spRepeat" />
+
+    <ImageButton
+        android:id="@+id/bnDecrease"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:contentDescription="@string/buttonDescription"
+        app:layout_constraintEnd_toStartOf="@+id/bnIncrease"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sbrVolume"
+        app:srcCompat="@drawable/rewind" />
+
+    <ImageButton
+        android:id="@+id/bnIncrease"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:contentDescription="@string/buttonDescription"
+        app:layout_constraintBottom_toBottomOf="@+id/bnDecrease"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/bnDecrease"
+        app:layout_constraintTop_toTopOf="@+id/bnDecrease"
+        app:srcCompat="@drawable/forward" />
+
+    <Button
+        android:id="@+id/bnFx1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/bnFx1"
+        app:layout_constraintEnd_toStartOf="@+id/bnFx2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bnDecrease" />
+
+    <Button
+        android:id="@+id/bnFx3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="@string/bnFx3"
+        app:layout_constraintBottom_toBottomOf="@+id/bnFx2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/bnFx2"
+        app:layout_constraintTop_toTopOf="@+id/bnFx2" />
+
+    <Button
+        android:id="@+id/bnFx2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="@string/bnFx2"
+        app:layout_constraintBottom_toBottomOf="@+id/bnFx1"
+        app:layout_constraintEnd_toStartOf="@+id/bnFx3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/bnFx1"
+        app:layout_constraintTop_toTopOf="@+id/bnFx1" />
+
+    <Button
+        android:id="@+id/bnStop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:text="@string/bnStop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bnFx2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
