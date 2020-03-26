@@ -1,2 +1,2 @@
 include ':app'
-rootProject.name='SoundSeekBarSpinnerDemo'
+rootProject.name='Sound'

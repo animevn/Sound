@@ -1,4 +1,4 @@
-package com.haanhgs.app.soundseekbarspinnerdemo;
+package com.haanhgs.app.sound;
 
 import android.content.Context;
 
