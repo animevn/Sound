@@ -10,10 +10,10 @@ import androidx.lifecycle.MutableLiveData;
 
 public class Repo {
 
-    private MutableLiveData<Sound> liveData = new MutableLiveData<>();
+    private final MutableLiveData<Sound> liveData = new MutableLiveData<>();
     private Sound sound;
 
-    private Context context;
+    private final Context context;
     private SoundPool soundPool;
 
     private void initSoundPool(){
