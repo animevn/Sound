@@ -10,7 +10,7 @@
         android:id="@+id/spRepeat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="16dp"
         android:entries="@array/spinner"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -22,11 +22,11 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
-        android:layout_marginEnd="32dp"
         android:max="100"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spRepeat" />
+        app:layout_constraintTop_toBottomOf="@+id/spRepeat"
+        app:layout_constraintWidth_percent=".8"
+        />
 
     <ImageButton
         android:id="@+id/bnDecrease"
@@ -38,7 +38,7 @@
         app:layout_constraintEnd_toStartOf="@+id/bnIncrease"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvVolume"
+        app:layout_constraintTop_toBottomOf="@+id/sbrVolume"
         app:srcCompat="@drawable/rewind" />
 
     <ImageButton
@@ -59,13 +59,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
         android:text="@string/bnFx1"
+        app:layout_constraintBottom_toTopOf="@id/bnStop"
         app:layout_constraintEnd_toStartOf="@+id/bnFx2"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bnDecrease" />
+        app:layout_constraintTop_toBottomOf="@+id/bnIncrease" />
 
     <Button
         android:id="@+id/bnFx3"
@@ -95,20 +96,22 @@
         android:id="@+id/bnStop"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
+        android:layout_marginBottom="32dp"
         android:text="@string/bnStop"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bnFx2" />
+        app:layout_constraintTop_toBottomOf="@+id/bnFx1" />
 
     <TextView
         android:id="@+id/tvVolume"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
         android:text="@string/volume"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sbrVolume" />
+        app:layout_constraintBottom_toBottomOf="@+id/sbrVolume"
+        app:layout_constraintStart_toEndOf="@+id/sbrVolume"
+        app:layout_constraintTop_toTopOf="@+id/sbrVolume" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

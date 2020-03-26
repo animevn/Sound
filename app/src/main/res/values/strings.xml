@@ -7,6 +7,7 @@
     <string name="bnFx2">FX2</string>
     <string name="bnFx3">FX3</string>
     <string name="bnStop">Stop</string>
+    <string name="volume">20</string>
 
     <string-array name="spinner">
         <item>1</item>
